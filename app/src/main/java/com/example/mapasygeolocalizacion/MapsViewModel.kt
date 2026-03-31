@@ -21,14 +21,14 @@ class MapsViewModel : ViewModel() {
     //ITSUR
     /*var destinationLat by mutableStateOf("20.139431259239895")
     var destinationLng by mutableStateOf("-101.15075602647381")*/
-     //Casa America
-       var destinationLat by mutableStateOf("20.1366974701443")
-        var destinationLng by mutableStateOf("-101.19251489713973")
 
-    /*  //Casa Paola
+     //Casa America
+       //var destinationLat by mutableStateOf("20.1356374701443")
+        //var destinationLng by mutableStateOf("-101.19211489713973")
+
+    //Casa Paola
         var destinationLat by mutableStateOf("20.139431259239895")
         var destinationLng by mutableStateOf("-101.15075602647381")
-    */
     // Consola de errores en pantalla
     val consoleLogs = mutableStateListOf<String>()
 
@@ -47,7 +47,7 @@ class MapsViewModel : ViewModel() {
 
     private fun addLog(message: String) {
         Log.d("MapsApp", message)
-        consoleLogs.add(0, message) // Añadir al inicio para ver lo más reciente arriba
+        consoleLogs.add(0, message)
         if (consoleLogs.size > 10) consoleLogs.removeLast()
     }
 

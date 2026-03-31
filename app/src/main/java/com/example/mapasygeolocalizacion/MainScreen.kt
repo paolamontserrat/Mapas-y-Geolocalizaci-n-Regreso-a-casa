@@ -34,8 +34,6 @@ fun MainScreen(viewModel: MapsViewModel) {
     val currentLocation by viewModel.currentLocation.collectAsState()
     val routePoints by viewModel.routePoints.collectAsState()
     val logs = viewModel.consoleLogs
-
-    // TU API KEY DE OPENROUTE SERVICE
     val apiKey = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjBlMzg0MzAyNWY4MTQ1YzFiMzhhNzM5YWEwZGY2YjIyIiwiaCI6Im11cm11cjY0In0="
 
     LaunchedEffect(locationPermissionState.status.isGranted) {
